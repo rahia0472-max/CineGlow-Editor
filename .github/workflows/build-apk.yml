@@ -1,13 +1,15 @@
 name: Build CineGlow APK
 
 on:
-  workflow_dispatch:
+  'Push;'
 
 jobs:
   build:
     runs-on: ubuntu-latest
 
     steps:
+    branches:'
+    -main
       - name: Download ZIP from repository
         uses: actions/checkout@v6
 
